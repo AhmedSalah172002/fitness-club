@@ -1,0 +1,13 @@
+@use "../../Component/utility/scss/navbar";
+
+@use "../../Component/Home/scss/LandPage";
+@use "../../Component/Home/scss/BodyPart";
+@use "../../Component/Home/scss/ExercisesResult";
+@use "../../Component/Exercises/scss/ExerciseDetail";
+@use "../../Component/Exercises/scss/Youtube";
+
+body{
+    font-family: 'Josefin Sans';
+    background-color: #FFFAFB !important;
+    user-select:none !important;
+}

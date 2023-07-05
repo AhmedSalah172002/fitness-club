@@ -1,0 +1,36 @@
+%detail{
+    color: white;
+    font-weight:500;
+    border-radius: 50px;
+    padding:5px 15px;
+
+}
+.results{
+    a{
+        text-decoration: none !important;
+        color: black !important;
+    }
+}
+.exercise{
+    overflow: hidden;
+    cursor:pointer;
+    background-color: white;
+    padding:20px 10px;
+    border-top:3px solid #FF2625;
+    transition:.3s;
+    &:hover{
+        transform:scale(1.18)
+    }
+    .details{
+        display:flex;
+        .one{
+            background-color: #FF6262;
+            @extend %detail;
+        }
+        .two{
+            background-color: #0034FF;
+            @extend %detail;
+        }
+    }
+    
+}

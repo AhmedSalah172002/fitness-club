@@ -1,0 +1,73 @@
+@mixin breakpoints($point) {
+    @if $point == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if $point == small {
+      @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+      }
+    } @else if $point == medium {
+      @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+      }
+    } @else if $point == large {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  }
+
+
+  
+
+.search{
+    display:flex;
+    justify-content: center;
+    .searchTerm{
+        padding:12px 20px;
+        border-right-color: transparent;
+        width: 60%;
+        color: #FF2625;
+        &:focus{
+            outline-color: #FF2625;
+            
+        }
+    }
+    .searchButton{
+        background:#FF2625 ;
+        color:white;
+        width:fit-content;
+        text-align: center;
+        padding: 10px 25px;
+        border-color: #FF2625  ;
+        border-radius: 0 6px 6px 0 !important;
+    }
+}
+
+.Parts{
+  padding: 25px;
+  .parts-image{
+    width: fit-content;
+    margin:auto;
+    img{
+      width:80px;
+      @include breakpoints(mobile) {
+          width:60px;
+      }
+     }
+  }
+  
+ 
+   p{
+    color: #FF2625  ;
+    
+    font-weight:600;
+    font-size:1.2em;
+    margin-top:10px;
+    @include breakpoints(mobile) {
+        font-size:16px;
+        
+        }
+   }
+}

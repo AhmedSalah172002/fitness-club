@@ -1,0 +1,82 @@
+@mixin breakpoints($point) {
+    @if $point == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if $point == small {
+      @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+      }
+    } @else if $point == medium {
+      @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+      }
+    } @else if $point == large {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  }
+
+
+  
+
+.navbar{
+    margin-top: 20px !important;
+    width:100%;
+    img{
+        width: 48px;
+        height: 48px;
+        margin: 0px 20px;
+    }
+    h1{
+        font-size:3.2em !important ;
+        text-transform: capitalize !important ;
+        margin: auto !important ;
+        color: #FF2625;
+        letter-spacing: 15px !important ;
+        @include breakpoints(mobile) {
+        font-size: 1.5em !important ;
+        letter-spacing: 3px !important ;
+        }
+        @include breakpoints(small) {
+            font-size: 2em !important ;
+            letter-spacing: 5px !important ;
+        }
+        .waviy {
+          position: relative;
+          span {
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            animation: flip 3.5s infinite;
+            animation-delay: calc(.2s * var(--i))
+          }
+        }
+        }
+
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+
+
+
+
+
+/* pagination */
+.page-link {
+  background-color: #f9f9f9 !important;
+  color: #272727 !important;
+  border-radius: 10px !important;
+  border: solid 1px 272727 !important;
+  &:hover {
+    background-color: #FF2625 !important;
+    color: white !important;
+    border: solid 1px 272727 !important;
+  }
+}
+/* end pagination */

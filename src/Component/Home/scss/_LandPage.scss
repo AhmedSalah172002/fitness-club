@@ -1,0 +1,59 @@
+%letter{
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+.land-text{
+    min-height:fit-content
+    h4{
+    @extend %letter;
+    color: #FF2625;
+    font-weight: 600;
+    font-size: 26px;
+    }
+    h2{
+        @extend %letter;
+        font-weight: 700;
+        margin-bottom: 23px;
+        margin-top: 30px;
+    }
+    p{
+        font-size: 22px;
+        font-family: Alegreya;
+        line-height: 35px;
+    }
+    a{
+        text-decoration: none !important;
+        color: white;
+        background-color: #FF2625;
+        padding:15px 35px !important;
+        border-radius:0 6px 0 6px;
+        font-weight:600;
+        display:block;
+        width: fit-content ;
+        margin-top:25px !important;
+    }
+}
+
+.land-image{
+    img{
+        width:75%;
+        display:block;
+        margin:auto;
+    }
+}
+
+
+.Advertisment{
+    border:3px solid #FF2625;
+    border-color:#FF2625 transparent #FF2625;
+    padding: 5px 0 ;
+    marquee{
+        font-size:1.2em;
+        font-weight:500;
+    }
+    img{
+        width:30px !important;
+        margin:0 10px;
+    }
+}
